@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <more-button></more-button>
+    </ion-buttons>
+    <ion-title>
+      Empty Page With Sub - Category
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="main-background-gradient">
+  <ion-card>
+    <ion-card-header><h2 class="ion-card-header-text">Ion card header</h2></ion-card-header>
+    <ion-card-content>
+      <p>Home content</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-grid text-center>
+        <button *ngFor="let subCategory of subCategoryList; let i = index" color="primary"
+                ion-button
+                round
+                (click)="onModal(subCategory)">{{ subCategory.title }}</button>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
