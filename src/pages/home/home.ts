@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HomeListLinks} from "../../variables-infos/pagesList";
 
 @Component({
   selector: 'page-home',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
+    homeListLink: any[] = HomeListLinks;
+
+    constructor() {
   }
 
 }
